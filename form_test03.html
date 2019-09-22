@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <title></title>
     </head>
     <body>
-        <form>
+        <form method="GET" action="info.php">
             이름 :
-            <input type="text" placeholder="name"><br>
+            <input type="text" name="myName" placeholder="name"><br>
             학년 :
             <input type="radio" name="grade" value="1학년">1학년
             <input type="radio" name="grade" value="2학년" checked>2학년
             <input type="radio" name="grade" value="3학년">3학년<br>
             선택 과목 :
-            <input type="checkbox" name="sbj" value="PHP" checked>PHP
-            <input type="checkbox" name="sbj" value="C">C언어
-            <input type="checkbox" name="sbj" value="JAVA">JAVA<br>
+            <input type="checkbox" name="sbj[]" value="PHP">PHP
+            <input type="checkbox" name="sbj[]" value="C">C언어
+            <input type="checkbox" name="sbj[]" value="JAVA">JAVA<br>
             <input type="submit" value="확인">
             <input type="reset" value="취소">
         </form>
