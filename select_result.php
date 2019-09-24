@@ -6,5 +6,5 @@
 
     echo "작성자 : {$writer}<br>";
     echo "{$option} : {$title}<br>";
-    echo "내용 : {$content}";
+    echo "{$content}";
 ?>
