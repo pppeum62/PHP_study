@@ -31,8 +31,8 @@
 
     $conn = mysqli_connect('127.0.0.1', 'root', 'mirim2', 'php');
 
-    $data_stream = " '$name', '$pw', '$birth', '$tel', $age ";
-    $sql = "insert into members (name, password, birth, tel, age) values(".$data_stream.")";
+    $data_stream = " '$id', '$name', '$pw', '$birth', '$tel', $age ";
+    $sql = "insert into members (id, name, password, birth, tel, age) values(".$data_stream.")";
 
     if (mysqli_query($conn, $sql)) {
         echo "insert 성공";
@@ -81,6 +81,5 @@
     echo "</tr>";
 
     echo "</table>";
-
 
 ?>
