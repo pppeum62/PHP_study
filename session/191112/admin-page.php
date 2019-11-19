@@ -2,7 +2,8 @@
     echo '<h3>관리자 페이지</h3>';
     echo '<hr>';
 
-    echo '<a href="member-list.php">회원 리스트 보기</a>';
+    echo '<a href="member-list.php">회원 리스트 보기</a><br>';
+    echo '<a href="member-delete.php">회원 정보 삭제</a>';
     echo '<br><hr>';
     
     echo '검색&nbsp;';

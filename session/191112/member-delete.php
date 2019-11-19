@@ -1,6 +1,6 @@
 <?php
-    echo '<h3>회원 리스트</h3>';
-    echo '회원 정보를 모두 보려면 회원 이름을 클릭하세요';
+    echo '<h3>회원 정보 삭제 페이지</h3>';
+    echo '삭제할 회원을 선택해주세요';
     echo '<hr>';
 
     $conn = mysqli_connect('127.0.0.1', 'root', 'mirim2', 'php');
@@ -14,7 +14,7 @@
                 continue;
             }
             $id = $row['id'];
-            echo "(id : ".$row['id'].") - (name : <a href='./member-list-all.php?id=$id'>".$row['name']."</a>)<br>";
+            echo "(id : ".$row['id'].") - (name : ".$row['name']."</a>) - (<a href='member-delete-result.php?id=$id'>회원 정보 삭제</a>)<br>";
         }
     } else {
         echo "저장된 데이터가 없습니다.";

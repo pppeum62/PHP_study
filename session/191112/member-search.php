@@ -19,7 +19,8 @@
 
     if (mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_array($result)) {
-            echo "(id : ".$row['id'].") - (name : ".$row['name'].") - (birthday : ".$row['birth'].") - (tel : ".$row['tel'].")<br>";
+            echo "(id : ".$row['id'].") - (name : ".$row['name'].") - (birthday : ".$row['birth'].") -
+            (tel : ".$row['tel'].") - (age : ".$row['age'].")<br>";
         }
     } else {
         echo "저장된 데이터가 없습니다.";
