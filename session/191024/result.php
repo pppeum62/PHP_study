@@ -23,9 +23,9 @@
 
     $age = date("Y", time()) - $year + 1;
 
-    if ($r1 == "1" || $r1 == "3") {
+    if ($r2 == "1" || $r2 == "3") {
         $gender = "M";
-    } else if ($r1 == "2" || $r1 == "4") {
+    } else if ($r2 == "2" || $r2 == "4") {
         $gender = "F";
     }
 

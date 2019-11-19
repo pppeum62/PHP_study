@@ -16,7 +16,7 @@
                 if($id == "admin") {
                     echo '<a href="./admin-page.php">관리자 페이지</a><br>';
                 }
-                echo '<a href="#">회원정보수정</a><br>';
+                echo '<a href="./member-update.php">회원정보수정</a><br>';
                 echo '<a href="#">게시판</a>';
 
                 if($ck == true){
