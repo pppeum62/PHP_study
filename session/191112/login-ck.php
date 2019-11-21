@@ -16,18 +16,18 @@
                 if($id == "admin") {
                     echo '<a href="./admin-page.php">관리자 페이지</a><br>';
                 }
-                echo '<a href="./member-update.php">회원정보수정</a><br>';
+                echo "<a href='member-update.php?id=$id'>회원정보수정</a><br>";
                 echo '<a href="#">게시판</a>';
 
                 if($ck == true){
                     setcookie('saveid', $id);
                 }
             } else {
-                echo '비밀번호를 확인해주세요.';
+                echo '<script>alert("비밀번호를 확인해주세요"); history.go(-1);</script>';
             }
         }
     } else {
-        echo "아이디를 확인해주세요.";
+        echo '<script>alert("아이디를 확인해주세요"); history.go(-1);</script>';
     }
 
     mysqli_close($conn);

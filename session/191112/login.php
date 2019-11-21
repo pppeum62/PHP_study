@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>쿠키 생성하기</title>
+        <title>로그인</title>
         <style>
             a:link { text-decoration: none; color: black; }
         </style>
