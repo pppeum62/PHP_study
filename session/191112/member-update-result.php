@@ -29,19 +29,19 @@
             }
 
             if ($name) {     // 변경할 이름이 입력되었는지 체크
-                $sql = 'update members set password="' .$name. '" where id="' .$id. '"';
+                $sql = 'update members set name="' .$name. '" where id="' .$id. '"';
                 mysqli_query($conn, $sql);
                 echo '<script>alert("회원정보가 변경되었습니다!"); document.location.href="login-ck.php";</script>';
             }
 
             if ($birth) {        // 변경할 생년월일이 입력되었는지 체크
-                $sql = 'update members set password="' .$birth. '" where id="' .$id. '"';
+                $sql = 'update members set birth="' .$birth. '" where id="' .$id. '"';
                 mysqli_query($conn, $sql);
                 echo '<script>alert("회원정보가 변경되었습니다!"); document.location.href="login-ck.php";</script>';
             }
 
-            if ($tel) {     // 변경할 전화번호가 입력되었는지 체크
-                $sql = 'update members set password="' .$tel. '" where id="' .$id. '"';
+            if ($tel_last) {     // 변경할 전화번호가 입력되었는지 체크
+                $sql = 'update members set tel="' .$tel. '" where id="' .$id. '"';
                 mysqli_query($conn, $sql);
                 echo '<script>alert("회원정보가 변경되었습니다!"); document.location.href="login-ck.php";</script>';
             }
