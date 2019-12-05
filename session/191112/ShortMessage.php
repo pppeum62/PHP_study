@@ -4,6 +4,10 @@
         <title></title>
         <meta charset="UTF-8">
     </head>
+    <style>
+    .btn { background: white; border: 1px solid #ccc; width: 110px; height: 30px; }
+    .align-center { text-align: center; }
+    </style>
     <body>
         <form method="POST" action="Message.php">
             <input type="hidden" value="<?=$_GET['id']?>" name="w_name">
@@ -21,9 +25,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2">
-                        <input type="submit" value="Send">
-                        <input type="reset" value="Cancel">
+                    <td colspan="2" class="align-center">
+                        <input type="submit" value="Send" class="btn">
+                        <input type="reset" value="Cancel" class="btn">
                     </td>
                 </tr>
             </table>
