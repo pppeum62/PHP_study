@@ -16,13 +16,14 @@
 
                 $sql = 'select * from message_box where name="'.$id.'" and receive=0';
                 mysqli_query($conn, $sql);
+                $message_num = mysqli_num_rows(mysqli_query($conn, $sql));
 
                 if($id == "admin") {
                     echo '<a href="./admin-page.php">관리자 페이지</a><br>';
                 }
                 echo "<a href='member-update.php?id=$id'>회원정보수정</a><br>";
                 echo "<a href='ShortMessage.php?id=$id'>쪽지 보내기</a><br>";
-                echo '새로운 쪽지 <a href="checkMessage.php">' . mysqli_num_rows($result) . '</a>';
+                echo "새로운 쪽지 <a href='checkMessage.php?id=$id'>" . $message_num . '</a>';
 
                 if($ck == true){
                     setcookie('saveid', $id);

@@ -6,7 +6,7 @@
     </head>
     <body>
         <form method="POST" action="Message.php">
-            <input type="hidden" valuse="<?$_GET['id']?>" name="w_name">
+            <input type="hidden" value="<?=$_GET['id']?>" name="w_name">
             <table>
                 <tr>
                     <td>Receive</td>
