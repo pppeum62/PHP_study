@@ -15,11 +15,12 @@
     echo '</tr>';
 
     while($row = mysqli_fetch_array($result)) {
+        $num = $row['num'];
         echo '<tr>';
         echo '<td>'. $row['w_name'] .'</td>';
         echo '<td>'. $row['contents'] .'</td>';
         echo '<td>'. $row['date'] .'</td>';
-        echo '<td><a href="#">확인</a></td>';
+        echo "<td><a href='receive-check.php?num=$num'>확인</a></td>";
         echo '</tr>';
     }
     echo '</table>';
