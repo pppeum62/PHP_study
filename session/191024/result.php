@@ -12,6 +12,7 @@
     $tel_last = $_POST{'tel-last'};
     $tel = "$tel_first"."-"."$tel_mid"."-"."$tel_last";
     $address = $_POST{'address'};
+    $address_details = $_POST{'address_details'};
 
     $yr = substr($birth, 0, 2);
 
@@ -24,15 +25,15 @@
     $age = date("Y", time()) - $year + 1;
 
     if ($r2 == "1" || $r2 == "3") {
-        $gender = "M";
+        $gender = "남자";
     } else if ($r2 == "2" || $r2 == "4") {
-        $gender = "F";
+        $gender = "여자";
     }
 
     $conn = mysqli_connect('127.0.0.1', 'root', 'mirim2', 'php');
 
-    $data_stream = " '$id', '$name', '$pw', '$birth', '$tel', $age ";
-    $sql = "insert into members (id, name, password, birth, tel, age) values(".$data_stream.")";
+    $data_stream = " '$id', '$name', '$pw', '$birth', '$address', '$address_details', '$tel', '$email', '$gender', $age ";
+    $sql = "insert into members (id, name, password, birth, addr1, addr2, tel, email, gender, age) values(".$data_stream.")";
 
     if (mysqli_query($conn, $sql)) {
         echo "insert 성공";
@@ -64,7 +65,7 @@
 
     echo "<tr>";
     echo "<td>성별</td>";
-    if ($gender == "M") {
+    if ($gender == "남자") {
         echo "<td>남자</td>";
     } else {
         echo "<td>여자</td>";
