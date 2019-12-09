@@ -14,6 +14,8 @@
     $address = $_POST{'address'};
     $address_details = $_POST{'address_details'};
 
+    $encrypted_pw = password_hash($pw, PASSWORD_DEFAULT);
+
     $conn = mysqli_connect('127.0.0.1', 'root', 'mirim2', 'php');
     
     /* 아이디 중복 확인 */
@@ -42,7 +44,7 @@
             $gender = "여자";
         }
 
-        $data_stream = " '$id', '$name', '$pw', '$birth', '$address', '$address_details', '$tel', '$email', '$gender', $age ";
+        $data_stream = " '$id', '$name', '$encrypted_pw', '$birth', '$address', '$address_details', '$tel', '$email', '$gender', $age ";
         $sql = "insert into members (id, name, password, birth, addr1, addr2, tel, email, gender, age) values(".$data_stream.")";
 
         if (mysqli_query($conn, $sql)) {

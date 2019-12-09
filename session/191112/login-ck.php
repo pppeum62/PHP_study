@@ -11,7 +11,7 @@
 
     if (mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_array($result)) {
-            if($password == $row['password']) {
+            if(password_verify($password, $row['password'])) {
                 echo '로그인 성공!<br><br>';
 
                 $sql = 'select * from message_box where name="'.$id.'" and receive=0';
